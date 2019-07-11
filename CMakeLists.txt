@@ -148,6 +148,10 @@ foreach(SD_API_VER ${SD_API_VERS})
         include/${SD_API_VER_L}/ble_types.h
         include/${SD_API_VER_L}/nrf_error.h
     )
+    
+    if(${SD_API_VER} STREQUAL SD_API_V6)
+        set(${SD_API_VER}_PUBLIC_HEADERS ${${SD_API_VER}_PUBLIC_HEADERS} include/${SD_API_VER_L}/ble_nfc.h)
+    endif()
 
     string(TOLOWER ${SD_API_VER} SD_API_VER_L)
     set(CONNECTIVITY_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/hex/${SD_API_VER_L}")

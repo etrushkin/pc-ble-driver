@@ -78,6 +78,9 @@ extern "C" {
 #define BLE_L2CAP_SVC_BASE     0xB8       /**< L2CAP BLE SVC base. */
 #define BLE_L2CAP_SVC_LAST     0xBF       /**< L2CAP BLE SVC last. */
 
+#define BLE_NFC_SVC_BASE       0xC0       /**< NFC reader SVC base. */
+#define BLE_NFC_SVC_LAST       0xC7       /**< NFC reader SVC last. */
+
 
 #define BLE_EVT_INVALID        0x00       /**< Invalid BLE Event. */
 
@@ -95,6 +98,9 @@ extern "C" {
 
 #define BLE_L2CAP_EVT_BASE     0x70       /**< L2CAP BLE Event base. */
 #define BLE_L2CAP_EVT_LAST     0x8F       /**< L2CAP BLE Event last. */
+
+#define BLE_NFC_EVT_BASE     0x90       /**< NFC BLE Event base. */
+#define BLE_NFC_EVT_LAST     0x9F       /**< NFC BLE Event last. */
 
 
 #define BLE_OPT_INVALID        0x00       /**< Invalid BLE Option. */

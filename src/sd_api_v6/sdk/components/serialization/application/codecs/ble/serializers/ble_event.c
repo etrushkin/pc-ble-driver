@@ -44,6 +44,7 @@
 #include "ble_gattc_evt_app.h"
 #include "ble_gatts_evt_app.h"
 #include "ble_l2cap_evt_app.h"
+#include "ble_nfc_app.h"
 #include "app_util.h"
 
 uint32_t ble_event_dec(uint8_t const * const p_buf,
@@ -304,6 +305,9 @@ uint32_t ble_event_dec(uint8_t const * const p_buf,
 #endif
         case BLE_GAP_EVT_SCAN_REQ_REPORT:
             fp_event_decoder = ble_gap_evt_scan_req_report_dec;
+            break;
+        case BLE_NFC_EVT_TAG_ACQUIRED:
+            fp_event_decoder = ble_nfc_evt_tag_acquired_dec;
             break;
         default:
             break;

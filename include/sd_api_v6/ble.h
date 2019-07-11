@@ -58,6 +58,7 @@
 #include "ble_gatt.h"
 #include "ble_gattc.h"
 #include "ble_gatts.h"
+#include "ble_nfc.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -220,6 +221,7 @@ typedef struct
     ble_gattc_evt_t   gattc_evt;  /**< GATT client originated event, evt_id in BLE_GATTC_EVT* series. */
     ble_gatts_evt_t   gatts_evt;  /**< GATT server originated event, evt_id in BLE_GATTS_EVT* series. */
     ble_l2cap_evt_t   l2cap_evt;  /**< L2CAP originated event, evt_id in BLE_L2CAP_EVT* series. */
+    ble_nfc_evt_t     nfc_evt;
   } evt;                          /**< Event union. */
 } ble_evt_t;
 
