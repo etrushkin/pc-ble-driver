@@ -94,6 +94,7 @@ typedef enum { SD_RPC_PARITY_NONE, SD_RPC_PARITY_EVEN } sd_rpc_parity_t;
 typedef enum {
     SYS_RESET,  /** System reset of the connectivity chip, all state is reset. */
     SOFT_RESET, /** Reset transport and SoftDevice related states only. */
+    DFU_RESET
 } sd_rpc_reset_t;
 
 /**@bref Error codes for SD_RPC related errors */
